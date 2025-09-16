@@ -7,7 +7,7 @@ const router = express.Router()
 // 1) 1st middleware => [authentication middleware to verify the user is valid or not]
 const authentication = function (req, res, next) {
     console.log('Inside authentication middleware...');
-    req.user = { userId: 1, role: 'student' } // Dummy user
+    req.user = { userId: 1, role: 'admin' } // Dummy user
     if (req.user) {     // If a valid user is there in request then proceed to next() middleware.
         next()
     } else {
