@@ -8,14 +8,7 @@ const port = 3000
 app.use(express.json())
 
 
-// 2) Root route(Route handler)
-app.get('/', (req, res) => {
-    // console.log('Inside get request...');
-    // console.log(req.body);
-    res.send('Hello World!')
-})
-
-// 3) Mounting the router
+// 2) Mounting the router
 app.use('/api', router) // All routes in router.js will be prefixed with /api
 
 
